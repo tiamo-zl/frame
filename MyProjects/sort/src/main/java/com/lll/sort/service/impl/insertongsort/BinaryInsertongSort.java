@@ -43,7 +43,7 @@ public class BinaryInsertongSort implements ISort, IArrayWork {
      * @param index
      * @param target
      */
-    public void retrusion(Comparable[] needSortArray, int index, int target){
+    private void retrusion(Comparable[] needSortArray, int index, int target){
         SortUtils. print(needSortArray);
         System.out.println(index + "---" + target);
         Comparable last = needSortArray[target];
@@ -59,7 +59,7 @@ public class BinaryInsertongSort implements ISort, IArrayWork {
      * @param element
      * @return
      */
-    public int binarySearch(Comparable[] array,int lo, int hi, Comparable element){
+    private int binarySearch(Comparable[] array,int lo, int hi, Comparable element){
         int length = array.length;
         int mid = (lo + hi)/2;
         while (lo <= hi && 0 <= mid && mid < length) {

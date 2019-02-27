@@ -65,13 +65,6 @@ public class SortUtils {
         return true;
     }
 
-
-    public static void main(String[] args) {
-        Integer[] a = new Integer[]{1, 2, 3, 4, 5, 6};
-
-        System.out.println(isSorted(a));
-    }
-
     /**
      * 获取初始化数组
      * @return
@@ -93,12 +86,29 @@ public class SortUtils {
      * 数组进行工作后，打印数组
      * @param iArrayWork
      */
-    public static void work(IArrayWork iArrayWork){
+    public static Comparable[] work(IArrayWork iArrayWork){
         Integer[] array = getArray();
         iArrayWork.work(array);
         print(array);
+        return array;
     }
 
+    /**
+     * 数组进行工作后，打印数组
+     * @param iArrayWork
+     * @param needSortArray
+     * @return
+     */
+    public static Comparable[] work(IArrayWork iArrayWork, Comparable[] needSortArray){
+        iArrayWork.work(needSortArray);
+        print(needSortArray);
+        return needSortArray;
+    }
+
+    /**
+     * 打印数组
+     * @param array
+     */
     public static void print(Comparable[] array){
         int index = 0;
         for(Comparable element : array){

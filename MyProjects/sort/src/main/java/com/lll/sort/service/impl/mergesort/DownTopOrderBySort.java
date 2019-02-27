@@ -27,16 +27,6 @@ public class DownTopOrderBySort extends OrderBySort implements IArrayWork, ISort
         int length = needSortArray.length;
         aux = new Comparable[length];
 
-//        for (int size = 2; size < 2*length; size += size) {
-//            System.out.println("size: " + size );
-//            for (int lo = 0; lo < length; lo +=size ){
-//                System.out.println("lo: " + lo);
-//                int hi = Math.min(lo + size - 1, length - 1);
-//                int mid = (lo + hi) / 2;
-//                System.out.println(lo + "----" + mid + "-----" + hi);
-//                merge(needSortArray, aux, lo, mid, hi);
-//            }
-//        }
         for (int size = 1; size < length; size += size) {
             System.out.println("size: " + size);
             for (int lo = 0; lo < length - size; lo += size + size) {
