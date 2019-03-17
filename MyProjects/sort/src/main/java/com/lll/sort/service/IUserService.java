@@ -13,8 +13,8 @@ public interface IUserService {
 
     /**
      * 根据id进行查找
-     * @param id
-     * @return
+     * @param id id
+     * @return 用户信息
      */
     UserVO findOne(int id);
 }

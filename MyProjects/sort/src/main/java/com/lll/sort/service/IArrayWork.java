@@ -8,7 +8,7 @@ public interface IArrayWork {
 
     /**
      * 对数组进行一系列操作
-     * @param array
+     * @param array 对数组进行操作
      */
     void work(Comparable[] array);
 }

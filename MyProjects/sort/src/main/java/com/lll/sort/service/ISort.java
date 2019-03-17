@@ -8,7 +8,7 @@ public interface ISort {
 
     /**
      * 排序
-     * @param needSortArray
+     * @param needSortArray 需要排序的算法
      */
      void sort(Comparable[] needSortArray);
 }

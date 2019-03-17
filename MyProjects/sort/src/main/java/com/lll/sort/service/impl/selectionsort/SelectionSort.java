@@ -15,7 +15,7 @@ public class SelectionSort implements IArrayWork, ISort {
 
     /**
      * 选择排序
-     * @param needSortArray
+     * @param needSortArray 需要进行排序的数组
      */
     @Override
     public void sort(Comparable[] needSortArray) {
