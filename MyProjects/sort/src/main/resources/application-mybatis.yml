@@ -1,0 +1,7 @@
+mybatis:
+  #配置xml文件路径:
+  mapper-locations: classpath:mapper/*.xml
+  #配置模型路径
+  type-aliases-package: com.lll.sort.dao.DO
+  configuration:
+    log-prefix: com.lll.sort.dao.mapper

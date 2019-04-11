@@ -1,4 +1,4 @@
-package com.lll.sort.interceptor;
+package com.lll.frame.interceptor;
 
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
  * @CreateTime: 2019-02-25 17:00
  */
 @Component
-public class UserConfig implements HandlerInterceptor {
+public class UserInterceptor implements HandlerInterceptor {
 
     /**
      * 在请求处理前进行调用（Controller方法调用之前）

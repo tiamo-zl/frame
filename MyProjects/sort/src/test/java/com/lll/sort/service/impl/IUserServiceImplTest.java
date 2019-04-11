@@ -1,7 +1,7 @@
 package com.lll.sort.service.impl;
 
 import com.lll.sort.SortApplicationTests;
-import com.lll.sort.service.enter.UserVO;
+import com.lll.sort.dao.DO.User;
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,10 +13,9 @@ public class IUserServiceImplTest extends SortApplicationTests{
 
     @Test
     public void findOne() {
-        UserVO user = userServiceImpl.findOne(1);
+        User user = userServiceImpl.findOne(1);
 
         Assert.assertEquals(user.getId(), 1);
-
 
     }
 }

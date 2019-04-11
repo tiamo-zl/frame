@@ -1,6 +1,6 @@
-package com.lll.sort;
+package com.lll.frame.configuer;
 
-import com.lll.sort.interceptor.UserConfig;
+import com.lll.frame.interceptor.UserInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -17,7 +17,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupp
 public class MyMvcConfigurer extends WebMvcConfigurationSupport{
 
     @Autowired
-    private UserConfig userConfig;
+    private UserInterceptor userInterceptor;
 
     // 以下WebMvcConfigurationSupport 比较常用的重写接口
     // /** 解决跨域问题 **/
@@ -51,7 +51,7 @@ public class MyMvcConfigurer extends WebMvcConfigurationSupport{
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(userConfig)
+        registry.addInterceptor(userInterceptor)
                 // addPathPatterns 用于添加拦截规则 ， 先把所有路径都加入拦截， 再一个个排除
                 .addPathPatterns("/api/**")
                 // excludePathPatterns 表示改路径不用拦截
