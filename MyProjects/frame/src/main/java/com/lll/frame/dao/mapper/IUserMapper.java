@@ -7,8 +7,8 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 
 /**
- * @ClassName IUserMapper
- * @Description
+ * IUserMapper
+ *
  * @Author zl
  * @Create 2019-04-11 10:50
  **/
@@ -16,7 +16,7 @@ import java.util.List;
 public interface IUserMapper {
 
     /**
-     * 新增一个user
+     * 新增一个userh
      * @param user
      * @return
      */

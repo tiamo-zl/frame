@@ -17,17 +17,14 @@ import javax.sql.DataSource;
 import java.sql.SQLException;
 
 /**
- * @ClassName DatasourceConfig
- * @Description 数据库连接池配置
+ * DatasourceConfig
+ * 数据库连接池配置
  * @Author zl
  * @Create 2019-04-11 15:41
  **/
 @Configuration
-/**
- * 扫描 Mapper 接口并容器管理
- */
-@MapperScan(basePackages = DatasourceConfig.PACKAGE, sqlSessionFactoryRef = "sqlSessionFactory")
-public class DatasourceConfig {
+@MapperScan(basePackages = DataSourceConfig.PACKAGE, sqlSessionFactoryRef = "sqlSessionFactory") //扫描 Mapper 接口并容器管理
+class DataSourceConfig {
     /**
      * 精确到 master 目录，以便跟其他数据源隔离
      */
@@ -65,14 +62,18 @@ public class DatasourceConfig {
     @Bean(name = "dataSource")
     @Primary
     public DataSource dataSource() {
-        //jdbc配置
+        /**
+         * jdbc配置
+         */
         DruidDataSource dataSource = new DruidDataSource();
         dataSource.setDriverClassName(driverClass);
         dataSource.setUrl(url);
         dataSource.setUsername(user);
         dataSource.setPassword(password);
 
-        //连接池配置
+        /**
+         * 连接池配置
+         */
         dataSource.setMaxActive(maxActive);
         dataSource.setMinIdle(minIdle);
         dataSource.setInitialSize(initialSize);
@@ -109,7 +110,7 @@ public class DatasourceConfig {
         sessionFactory.setDataSource(dataSource);
         sessionFactory.setTypeAliasesPackage("cn.edu.nuc.Test1.entity");
         sessionFactory.setMapperLocations(new PathMatchingResourcePatternResolver()
-                .getResources(DatasourceConfig.MAPPER_LOCATION));
+                .getResources(DataSourceConfig.MAPPER_LOCATION));
         return sessionFactory.getObject();
     }
 

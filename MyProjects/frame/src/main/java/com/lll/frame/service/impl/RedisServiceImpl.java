@@ -20,8 +20,8 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @ClassName RedisServiceImpl
- * @Description Redis接口实现类
+ * RedisServiceImpl
+ * Redis接口实现类
  * @Author zl
  * @Create 2019-04-02 16:28
  **/

@@ -8,8 +8,8 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 
 /**
- * @ClassName: MyMvcConfigurer
- * @Description:
+ * MyMvcConfigurer
+ * mvc
  * @Author: ZL
  * @CreateTime: 2019-02-25 17:18
  */

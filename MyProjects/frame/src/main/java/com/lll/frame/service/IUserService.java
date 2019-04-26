@@ -6,8 +6,8 @@ import com.lll.frame.dao.DO.User;
 import java.util.List;
 
 /**
- * @ClassName: IUserService
- * @Description:
+ * IUserService
+ *
  * @Author: ZL
  * @CreateTime: 2019-02-25 17:51
  */

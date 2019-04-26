@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @ClassName RedisTest
- * @Description Redis 测试api
+ *  RedisTest
+ *  Redis 测试api
  * @Author zl
  * @Create 2019-04-02 14:08
  **/

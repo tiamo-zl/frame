@@ -14,8 +14,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * @ClassName RedisClusterConfig
- * @Description Redis集群配置类
+ * RedisClusterConfig
+ * Redis集群配置类
  * @Author zl
  * @Create 2019-04-02 18:06
  **/

@@ -1,0 +1,20 @@
+#不能用localhost,否则启动报异常:Unresolved address
+#tcp监听的端口
+tcp:
+  host: 192.168.31.53
+  port: 2000
+# bossGroup的线程数
+boss:
+  thread:
+    count: 2
+# worker的线程数
+worker:
+  thread:
+    count: 2
+#是否使用长连接
+so:
+  keepalive:  true
+  backlog: 100
+netty:
+  close:
+    byte: byebye

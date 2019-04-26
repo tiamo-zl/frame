@@ -5,8 +5,8 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * @ClassName IRedisService
- * @Description Redis 接口
+ * IRedisService
+ * Redis 接口
  * @Author zl
  * @Create 2019-04-02 16:22
  **/

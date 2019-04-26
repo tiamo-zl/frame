@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * @ClassName: UserConfig
- * @Description: 自定义拦截器
+ * UserConfig
+ * 自定义拦截器
  * @Author: ZL
  * @CreateTime: 2019-02-25 17:00
  */

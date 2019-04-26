@@ -3,14 +3,14 @@ package com.lll.frame.dao.DO;
 import lombok.Data;
 
 /**
- * @ClassName User
- * @Description 用户数据操作
+ * User
+ * 用户数据操作
  * @Author zl
  * @Create 2019-04-11 11:13
  **/
 @Data
 public class User {
-    /**
+    /**ÓÓ
      * id
      */
     private int id;
