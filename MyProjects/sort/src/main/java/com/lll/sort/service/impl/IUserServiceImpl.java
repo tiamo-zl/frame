@@ -6,6 +6,7 @@ import com.lll.sort.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -17,7 +18,7 @@ import java.util.List;
 @Service
 public class IUserServiceImpl implements IUserService {
 
-    @Autowired
+    @Resource
     IUserMapper userDao;
 
     @Override

@@ -3,8 +3,7 @@ server:
 spring:
   profiles:
     active: dev
-    #include: redis，jdbc
-    include: redis-cluster,jdbc,mybatis
+    include: jdbc,mybatis
 logging:
   level:
     com:

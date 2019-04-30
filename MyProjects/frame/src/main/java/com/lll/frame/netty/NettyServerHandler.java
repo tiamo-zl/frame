@@ -38,6 +38,7 @@ public class NettyServerHandler extends SimpleChannelInboundHandler<String> {
         log.info("client short id:" + clientIdToShort);
         if (msg.contains(nettyCloseByte)) {
             //close
+            System.err.println("close ----> : " + nettyCloseByte);
             ctx.channel().close();
         } else {
             //send to client
@@ -72,4 +73,5 @@ public class NettyServerHandler extends SimpleChannelInboundHandler<String> {
         System.err.println("disconnected ... ");
         super.channelInactive(ctx);
     }
+
 }
