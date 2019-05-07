@@ -24,16 +24,29 @@ public class UserApi {
     @Autowired
     private IUserService userService;
 
+    /**
+     * 获取所有人员
+     * @return
+     */
     @GetMapping("list")
     public List<User> get(){
         return userService.findAll();
     }
 
+    /**
+     * 根据人员id获取人员
+     * @param id
+     * @return
+     */
     @GetMapping("one")
     public User get(int id){
         return userService.findOne(id);
     }
 
+    /**
+     * 新增一个人员
+     * @return
+     */
     @GetMapping("add")
     public int add(){
         return userService.add();
