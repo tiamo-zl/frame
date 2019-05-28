@@ -1,0 +1,13 @@
+server:
+  port: 8021
+spring:
+  profiles:
+    active: dev
+    include: jdbc,mybatis
+logging:
+  level:
+    com:
+      lll:
+        sort:
+          dao:
+            mapper: debug

@@ -1,0 +1,14 @@
+spring:
+  rabbitmq:
+    addresses: 127.0.0.1:5672
+    username: guest
+    password: guest
+    virtual-host: /
+    connection-timeout: 15000
+    #消费端配置
+    listener:
+      simple:
+        concurrency: 10
+        acknowledge-mode: auto
+        max-concurrency: 20
+        prefetch: 1

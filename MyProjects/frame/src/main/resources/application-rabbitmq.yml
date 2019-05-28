@@ -1,0 +1,44 @@
+#spring:
+#  profiles: dev
+#  datasource:
+#    url: jdbc:mysql://127.0.0.1:3306/shell?characterEncoding=utf-8
+#    username: root
+#    password: mysql6633
+#    driverClassName: com.mysql.cj.jdbc.Driver
+#  jpa:
+#    show-sql:true
+
+#---------------------使用durid连接池
+druid:
+  allow: #允许登陆的IP地址
+    ip: 127.0.0.1
+  login: #登陆的账户密码
+    username: root
+    password: druid6633
+ds1:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/shell?characterEncoding=utf-8
+    username: root
+    password: mysql6633
+    driverClassName: com.mysql.cj.jdbc.Driver
+    # 配置初始化大小、最小、最大
+    initialSize: 20
+    minIdle: 20
+    maxActive: 200
+    #配置获取连接等待超时的时间
+    maxWait: 60000
+    #配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+    timeBetweenEvictionRunsMillis: 60000
+    #配置一个连接在池中最小生存的4时间，单位是毫秒
+    minEvictableIdleTimeMillis: 300000
+    #申请连接的时候检测，建议配置为true，不影响性能，并且保证安全性
+    testWhileIdle: true
+    #获取连接时执行检测，建议关闭，影响性能
+    testOnBorrow: false
+    #归还连接时执行检测，建议关闭，影响性能
+    testOnReturn: false
+    #是否开启PSCache，PSCache对支持游标的数据库性能提升巨大，oracle建议开启，mysql下建议关闭
+    poolPreparedStatements: true
+    #开启poolPreparedStatements后生效
+    maxPoolPreparedStatementPerConnectionSize: 20
+
