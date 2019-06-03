@@ -4,6 +4,7 @@ import com.lll.sort.dao.DO.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -13,6 +14,7 @@ import java.util.List;
  * @Create 2019-04-11 10:50
  **/
 @Mapper
+@Resource
 public interface IUserMapper {
 
     /**

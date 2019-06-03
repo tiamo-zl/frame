@@ -7,6 +7,8 @@ import com.lll.frame.service.IUserService;
 import com.lll.frame.utils.RedisKey;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -25,6 +27,7 @@ public class IUserServiceImpl implements IUserService {
     @Autowired
     IRedisService redisService;
 
+    @Transactional(propagation = Propagation.REQUIRED)
     @Override
     public User findOne(int id) {
         User user;

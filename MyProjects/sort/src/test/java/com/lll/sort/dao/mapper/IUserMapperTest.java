@@ -16,6 +16,6 @@ public class IUserMapperTest extends SortApplicationTests {
     @Test
     public void findAllTest(){
         List<User> all = userMapper.findAll();
-        Assert.assertEquals(all.size(), 5);
+        Assert.assertEquals(all.size(), 25);
     }
 }

@@ -3,6 +3,7 @@ package com.lll.frame.dao.mapper;
 import com.lll.frame.dao.DO.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -13,6 +14,7 @@ import java.util.List;
  * @Create 2019-04-11 10:50
  **/
 @Mapper
+@Repository
 public interface IUserMapper {
 
     /**

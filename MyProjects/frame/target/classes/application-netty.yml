@@ -6,11 +6,11 @@ tcp:
 # bossGroup的线程数
 boss:
   thread:
-    count: 2
+    count: 4
 # worker的线程数
 worker:
   thread:
-    count: 2
+    count: 4
 #是否使用长连接
 so:
   keepalive:  true
