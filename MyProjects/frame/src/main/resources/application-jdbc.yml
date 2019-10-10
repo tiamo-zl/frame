@@ -17,7 +17,7 @@ druid:
     password: druid6633
 ds1:
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/shell?characterEncoding=utf-8
+    url: jdbc:mysql://127.0.0.1:9906/shell?characterEncoding=utf-8
     username: root
     password: mysql6633
     driverClassName: com.mysql.cj.jdbc.Driver

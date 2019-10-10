@@ -30,6 +30,7 @@ public class IUserServiceImpl implements IUserService {
     @Transactional(propagation = Propagation.REQUIRED)
     @Override
     public User findOne(int id) {
+        int i = 1/0;
         User user;
         String key = RedisKey.USER_ID_KEY + id;
         Object value = redisService.get(key);

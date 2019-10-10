@@ -1,4 +1,5 @@
 *.idea
 *.iml
-../target/
-/MyProjects/sort/target
+*/target/
+*.DS_Store
+*/classes/

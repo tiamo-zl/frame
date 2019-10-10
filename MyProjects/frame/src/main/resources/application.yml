@@ -1,10 +1,10 @@
 server:
-  port: 8021
+  port: 8022
 spring:
   profiles:
     active: dev
     #include: redis,jdbc,mybatis,netty
-    include: redis-cluster,jdbc,mybatis,netty
+    include: jdbc,mybatis,rabbitmq,netty
 logging:
   level:
     com:

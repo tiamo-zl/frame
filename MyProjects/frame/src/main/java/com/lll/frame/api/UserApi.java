@@ -3,12 +3,10 @@ package com.lll.frame.api;
 
 import com.lll.frame.dao.DO.User;
 import com.lll.frame.service.IUserService;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -18,7 +16,7 @@ import java.util.List;
  * @CreateTime: 2019-02-25 17:39
  */
 @RestController
-@RequestMapping("api")
+@RequestMapping("api/user")
 public class UserApi {
 
     @Autowired
@@ -29,27 +27,53 @@ public class UserApi {
      * @return
      */
     @GetMapping("list")
-    public List<User> get(){
-        return userService.findAll();
+    public List<User> list(){
+        List<User> list = new ArrayList<>();
+        list.add(new User(1,"zl", 18));
+        list.add(new User(2,"cc", 18));
+        return list;
     }
 
     /**
      * 根据人员id获取人员
-     * @param id
      * @return
      */
-    @GetMapping("one")
-    public User get(int id){
-        return userService.findOne(id);
+    @GetMapping("get")
+    public User get(){
+        System.out.println(1/0);
+        return null;
+//        return userService.findOne(id);
+    }
+
+
+    /**
+     * post
+     * @return
+     */
+    @PostMapping("add")
+    public User add(
+            String appId,
+            String name,
+            @RequestBody List<User> list){
+
+        System.out.println(appId + " : " + name);
+        for (User user : list) {
+            System.out.println(user);
+        }
+        User user = new User();
+        user.setId(111);
+        return user;
     }
 
     /**
-     * 新增一个人员
+     * post
      * @return
      */
-    @GetMapping("add")
-    public int add(){
-        return userService.add();
+    @PostMapping("delete")
+    public String delete(
+            @RequestBody User user){
+        return "azl";
     }
+
 
 }
